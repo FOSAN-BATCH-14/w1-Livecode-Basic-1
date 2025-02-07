@@ -19,7 +19,14 @@ Contoh:
 
 function penghitungSiswaLulus(nilai) {
   //buat kodemu disini
-  
+  for (let i = 0; i < penghitungSiswaLulus(nilai).length; i++) {
+    nilai = penghitungSiswaLulus(nilai[i]);
+
+    nilai = ''
+  }
+  if (nilai >= 75) {
+    let lulus = ''
+  }
 }
 
 //Test case
