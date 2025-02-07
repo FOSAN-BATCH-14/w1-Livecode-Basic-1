@@ -18,8 +18,33 @@ Contoh:
 */
 
 function penghitungSiswaLulus(nilai) {
-  //buat kodemu disini
-  
+  let status = true;
+  let index = 0;
+  let jumalah = 0;
+  let lulus = 0;
+
+  if (nilai != []) {
+    while (status) {
+      if (nilai[index]) {
+        if (nilai[index] >= 75) {
+          lulus += 1;
+        }
+        jumalah += 1;
+        index++;
+      } else {
+        status = false;
+      }
+    }
+    if (lulus == 0 && nilai != []) {
+      return 'Tidak ada yang lulus';
+    } else if (lulus === jumalah && nilai != []) {
+      return 'semua orang lulus';
+    } else {
+      return `${lulus} orang lulus`;
+    }
+  } else {
+    return 'data kosong';
+  }
 }
 
 //Test case
