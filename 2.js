@@ -19,7 +19,7 @@ Contoh:
 
 function penghitungSiswaLulus(nilai) {
   //buat kodemu disini
-  
+
 }
 
 //Test case

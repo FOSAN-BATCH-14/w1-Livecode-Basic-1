@@ -13,9 +13,20 @@ Dilarang menggunakan built-in function
 */
 
 function jumlahHuruf(str) {
-  // isikan kode anda disini
-  
-}
+let count = 0;
+let hurufVokal = "aiueo";
+
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < hurufVokal.length; j++) {
+      if (str[i] === hurufVokal[j]) {
+        count++;
+      }
+      
+    }
+    
+  }
+  return count
+} 
 
 console.log(jumlahHuruf("indonesia")); //5
 console.log(jumlahHuruf("fosanacademy")); //5
