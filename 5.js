@@ -26,30 +26,44 @@ ATURAN CODING:
   - .splice()
 */
 
-function subsLocator(grid){
-  // your code here
-  
+function subsLocator(grid) {
+  for (let i = 0; i < grid.length; i++) {
+    for (let j = 0; j < grid[i].length; j++) {
+      if (grid[i][j] == '*') {
+        return [i, j];
+      }
+    }
+  }
+  return 'No drone';
 }
-console.log(subsLocator([
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', '*']
-])); // [2, 2]
+console.log(
+  subsLocator([
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', '*'],
+  ])
+); // [2, 2]
 
-console.log(subsLocator([
-  ['', '', ''],
-  ['', '*', ''],
-  ['', '', '']
-])); // [1, 1]
+console.log(
+  subsLocator([
+    ['', '', ''],
+    ['', '*', ''],
+    ['', '', ''],
+  ])
+); // [1, 1]
 
-console.log(subsLocator([
-  ['', '', '*'],
-  ['', '', ''],
-  ['', '', '']
-])); // [0, 2]
+console.log(
+  subsLocator([
+    ['', '', '*'],
+    ['', '', ''],
+    ['', '', ''],
+  ])
+); // [0, 2]
 
-console.log(subsLocator([
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', '']
-])); // No drone
+console.log(
+  subsLocator([
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', ''],
+  ])
+); // No drone
