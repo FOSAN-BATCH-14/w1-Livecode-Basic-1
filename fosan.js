@@ -22,16 +22,36 @@ output: jumlah Gold: 1, jumlah Silver: 1, jumlah Bronze: 1. Dan totalnya adalah:
 */
 
 function poinCalculator(string) {
-  
+  if (string.length == 0)
+    return 'jumlah Gold: 0, jumlah Silver: 0, jumlah Bronze: 0. Dan totalnya adalah: 0';
+
+  let gold = 0;
+  let silver = 0;
+  let bronze = 0;
+  let pointTotal = 0;
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === 'G') {
+      pointTotal += 2;
+      gold++;
+    } else if (string[i] === 'S') {
+      pointTotal += 1;
+      silver++;
+    } else {
+      pointTotal += 0.5;
+      bronze++;
+    }
+  }
+  return `jumlah Gold: ${gold}, jumlah Silver: ${silver}, jumlah Bronze: ${bronze}. Dan totalnya adalah: ${pointTotal}`;
 }
 
-console.log(poinCalculator("GSB"));
+console.log(poinCalculator('GSB'));
 // jumlah Gold: 1, jumlah Silver: 1, jumlah Bronze: 1. Dan totalnya adalah: 3.5
-console.log(poinCalculator("GGG"));
+console.log(poinCalculator('GGG'));
 // jumlah Gold: 3, jumlah Silver: 0, jumlah Bronze: 0. Dan totalnya adalah: 6
-console.log(poinCalculator("SSB"));
+console.log(poinCalculator('SSB'));
 // jumlah Gold: 0, jumlah Silver: 2, jumlah Bronze: 1. Dan totalnya adalah: 2.5
-console.log(poinCalculator("BBGSSGB"));
+console.log(poinCalculator('BBGSSGB'));
 // jumlah Gold: 2, jumlah Silver: 2, jumlah Bronze: 3. Dan totalnya adalah: 7.5
-console.log(poinCalculator(""));
+console.log(poinCalculator(''));
 // jumlah Gold: 0, jumlah Silver: 0, jumlah Bronze: 0. Dan totalnya adalah: 0

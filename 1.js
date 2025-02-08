@@ -11,17 +11,19 @@ Output : '9753'
  */
 
 function penampilAngka(stringAngka) {
+  let angkaGanjil = '';
   for (let i = 0; i < stringAngka.length; i++) {
     if (stringAngka[i] % 2 != 0) {
-      let angkaGanjil = '';
-      angkaGanjil + stringAngka[i];
+      angkaGanjil += stringAngka[i];
     }
   }
+
+  return angkaGanjil;
 }
 
 //Test case
 console.log(penampilAngka('12345678')); // '1357'
-// console.log(penampilAngka('1346789')); // '1379'
-// console.log(penampilAngka('1298967')); // '1997'
-// console.log(penampilAngka('43447453')); // '3753'
-// console.log(penampilAngka('46824')); // ''
+console.log(penampilAngka('1346789')); // '1379'
+console.log(penampilAngka('1298967')); // '1997'
+console.log(penampilAngka('43447453')); // '3753'
+console.log(penampilAngka('46824')); // ''
