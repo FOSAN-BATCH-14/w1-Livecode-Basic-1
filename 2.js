@@ -18,8 +18,27 @@ Contoh:
 */
 
 function penghitungSiswaLulus(nilai) {
-  //buat kodemu disini
+  if (nilai[0] === undefined){
+    return "Data kosong";
+  }
+
+  let jumlahLulus = 0;
+  let totalSiswa = 0;
   
+  while (nilai[totalSiswa] !== undefined){
+    if (nilai[totalSiswa] >= 75){
+      jumlahLulus++;
+    }
+    totalSiswa++;
+  }
+
+  if (jumlahLulus === 0){
+    return "Tidak ada yang lulus"
+  } else if (jumlahLulus === totalSiswa){
+    return "Semua orang lulus"
+  } else {
+    return jumlahLulus + " orang lulus"
+  }
 }
 
 //Test case
