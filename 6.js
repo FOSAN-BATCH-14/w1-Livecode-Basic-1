@@ -31,8 +31,16 @@ ATURAN CODING:
 */
 
 function throwbackMe(arr) {
-  
+  let reversedArr = [];
 
+  for (let i = arr.length - 1; i >= 0; i--) {
+      let reversedStr = "";
+      for (let j = arr[i].length - 1; j >= 0; j--) {
+          reversedStr += arr[i][j];
+      }
+      reversedArr[arr.length - 1 - i] = reversedStr;
+  }
+  return reversedArr;
 }
 
 console.log(throwbackMe(['dimitri', 'sergei', 'alexei']));
