@@ -14,7 +14,31 @@ Dilarang menggunakan built-in function
 
 function jumlahHuruf(str) {
   // isikan kode anda disini
-  
+  let vocal = 0;
+
+  for (i = 0; i < str.length; i++) {
+    switch (str[i]) {
+      case 'a':
+        vocal++
+        break;
+      case 'i':
+        vocal++
+        break;
+      case 'u':
+        vocal++
+        break;
+      case 'e':
+        vocal++
+        break;
+      case 'o':
+        vocal++
+        break;
+      default:
+        break;
+    }
+  }
+
+  return vocal;
 }
 
 console.log(jumlahHuruf("indonesia")); //5

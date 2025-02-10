@@ -11,12 +11,15 @@ Output : '9753'
  */
 
 function penampilAngka(stringAngka) {
+  let hasil = '';
+
   for (let i = 0; i < stringAngka.length; i++) {
     if (stringAngka[i] % 2 == 1) {
-        hasil = stringAngka[i]
-        console.log(stringAngka[i])
+      hasil += stringAngka[i];
     }
   }
+
+  return hasil;
 }
 
 //Test case

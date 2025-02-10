@@ -19,13 +19,22 @@ Contoh:
 
 function penghitungSiswaLulus(nilai) {
   //buat kodemu disini
-  for (let i = 0; i < penghitungSiswaLulus(nilai).length; i++) {
-    nilai = penghitungSiswaLulus(nilai[i]);
+  let lulus = 0;
 
-    nilai = ''
+  for (let i = 0; i < nilai.length; i++) {
+    if (nilai[i] >= 75) {
+      lulus++
+    }
   }
-  if (nilai >= 75) {
-    let lulus = ''
+
+  if (lulus < nilai.length && lulus != 0) {
+    return `${lulus} orang lulus.`;
+  } else if (lulus == nilai.length && nilai.length != 0) {
+    return 'Semua orang lulus.';
+  } else if (lulus == 0 && nilai.length != 0) {
+    return 'Tidak ada yang lulus.';
+  } else {
+    return 'Data kosong.';
   }
 }
 
