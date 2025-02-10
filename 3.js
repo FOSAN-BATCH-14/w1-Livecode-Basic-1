@@ -20,10 +20,8 @@ let hurufVokal = "aiueo";
     for (let j = 0; j < hurufVokal.length; j++) {
       if (str[i] === hurufVokal[j]) {
         count++;
-      }
-      
-    }
-    
+      }      
+    }    
   }
   return count
 } 

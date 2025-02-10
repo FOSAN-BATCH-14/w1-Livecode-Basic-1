@@ -22,7 +22,24 @@ output: jumlah Gold: 1, jumlah Silver: 1, jumlah Bronze: 1. Dan totalnya adalah:
 */
 
 function poinCalculator(string) {
-  
+    let gold = 0;
+    let silver = 0;
+    let bronze = 0;
+   let total = 0;
+    
+   for (let i = 0; i < string.length; i++) {
+    if (string[i]==="G") {
+        gold ++;
+        total += 2;
+    } else if (string[i]==="S") {
+        silver ++;
+        total += 1;
+    } else if (string[i]==="B") {
+        bronze ++;
+        total += 0.5;
+    }  
+   } 
+return `jumlah Gold: ${gold}, jumlah Silver: ${silver}, jumlah Bronze: ${bronze}. Dan totalnya adalah: ${total}`;
 }
 
 console.log(poinCalculator("GSB"));

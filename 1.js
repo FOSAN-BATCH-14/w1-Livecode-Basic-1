@@ -11,8 +11,13 @@ Output : '9753'
  */
 
 function penampilAngka(stringAngka) {
-    
-  }
+    let hasil = "";
+    for (let i = 0; i < stringAngka.length; i++) {  
+        if ((stringAngka[i] % 2) !== 0) {
+            hasil += stringAngka[i];
+        }    
+    } return hasil;    
+}
 
 //Test case
 console.log(penampilAngka("12345678")); // '1357'

@@ -34,7 +34,26 @@ ATURAN CODING:
 */
 
 function miniSudokuBoard(text) {
-  
+if (!text) {
+  return "Empty Board";
+}
+
+if (text.length !== 9) {
+  return "Invalid input";
+}
+
+  let board = [];
+  let row = [];
+
+  for (let i = 0; i <= text.length; i++) {
+    row.push(text[i]);
+
+    if (row.length === 3) {
+      board.push(row);
+      row=[];
+    } 
+  }
+  return board;
 }
 
 console.log(miniSudokuBoard('005030081'));
