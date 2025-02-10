@@ -45,7 +45,7 @@ if (text.length !== 9) {
   let board = [];
   let row = [];
 
-  for (let i = 0; i <= text.length; i++) {
+  for (let i = 0; i < text.length; i++) {
     row.push(text[i]);
 
     if (row.length === 3) {
