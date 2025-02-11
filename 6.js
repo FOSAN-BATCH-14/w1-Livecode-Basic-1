@@ -31,8 +31,20 @@ ATURAN CODING:
 */
 
 function throwbackMe(arr) {
-  
+  let hasil =[]
+  let index = 0
 
+  for (let i = arr.length - 1; i >= 0; i--) {
+    let kataBalik = arr[i]
+    let kataDiBalik =  ``;
+
+    for (let j = kataBalik.length - 1 ; j >= 0; j--) {
+      kataDiBalik += kataBalik[j]  
+    }
+    hasil[index] = kataDiBalik; //
+    index++;
+  }
+  return hasil
 }
 
 console.log(throwbackMe(['dimitri', 'sergei', 'alexei']));

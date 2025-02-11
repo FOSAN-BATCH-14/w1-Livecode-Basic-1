@@ -11,7 +11,14 @@ Output : '9753'
  */
 
 function penampilAngka(stringAngka) {
-  
+  let hasilGanjil =``
+
+  for (let i = 0; i< stringAngka.length; i++) {
+    if(stringAngka[i] % 2 !== 0){
+     hasilGanjil += stringAngka[i]
+     }
+ }   
+ return hasilGanjil
 }
 
 //Test case

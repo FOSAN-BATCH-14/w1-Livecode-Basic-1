@@ -13,8 +13,13 @@ Dilarang menggunakan built-in function
 */
 
 function jumlahHuruf(str) {
-  // isikan kode anda disini
-  
+  let hasilJumlah = 0
+  for (let i = 0; i < str.length ; i++) {
+    if (str[i] == `a` || str[i] == `i` || str[i] == `u` || str[i] == `e` || str[i] == `o`) {
+      hasilJumlah ++
+    }
+  }
+  return hasilJumlah
 }
 
 console.log(jumlahHuruf("indonesia")); //5

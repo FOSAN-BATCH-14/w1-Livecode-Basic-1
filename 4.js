@@ -15,13 +15,20 @@ Dilarang menggunakan built-in function selain yang diperbolehkan.
 */
 
 function binaryGenerator(angka) {
-    // isikan kode anda disini
-    
+    let stringAngka = angka.toString()
+    let hasil =``;
+    for (let i = 0; i < stringAngka.length; i++) {
+        if (stringAngka[i] >= `5` ) {
+            hasil += `1`
+        }else{hasil += `0`}
+    }
+    return hasil
 }
 
 console.log(binaryGenerator(45385593107843568));
-//'01011110001100111
+//'01011110001100111`
 console.log(binaryGenerator(509321967506747));
 //'101000111101101'
 console.log(binaryGenerator(366058562030849490134388085)); 
 //011011110000101010000011011
+
