@@ -18,9 +18,25 @@ Contoh:
 */
 
 function penghitungSiswaLulus(nilai) {
-  //buat kodemu disini
-  
-}
+  if (nilai.length === 0) {
+      return  `Data Kosong`
+    }
+
+  let hasilLulus = 0
+      for (let i = 0; i < nilai.length; i++) {
+          if(nilai[i] > 75){
+          hasilLulus++
+        } 
+    }
+
+  if (hasilLulus == nilai.length){
+    return `Semua orang lulus`
+  }else if (hasilLulus == 0){
+    return `Tidak ada yang lulus`
+  } 
+
+    return `${hasilLulus} orang lulus`
+} 
 
 //Test case
 console.log(penghitungSiswaLulus([76, 77, 30, 80, 10, 20])); // 3 orang lulus

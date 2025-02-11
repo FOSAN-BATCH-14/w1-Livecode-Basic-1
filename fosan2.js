@@ -34,9 +34,32 @@ ATURAN CODING:
 */
 
 function howManyMore(maxBudget, gifts) {
-  // your code here
-  
+    
+  for (let i = 0; i < gifts.length; i++) {
+    for (let j = 0; j < gifts.length; j++) {
+      if(gifts[i] < gifts[j]){
+        let temp = gifts[i]
+        gifts [i] = gifts[j]
+        gifts [j] = temp 
+      }
+    }
+
+    let count = 0
+    let total = 0
+
+    for (let i = 0; i < gifts.length; i++) {
+      if (total + gifts[i] <= maxBudget) {
+        total += gifts[i]
+        count ++;
+      }else{
+        break
+      }
+      }
+      return count
+  }
 }
+  
+
 
 
 console.log(howManyMore(30000, [15000, 12000, 5000, 3000, 10000])); // 4
