@@ -34,12 +34,24 @@ ATURAN CODING:
 */
 
 function miniSudokuBoard(text) {
-  if (text != '') {
+  if (text.length === 9) {
+    let hasil = [[], [], []];
+
     for (let i = 0; i < text.length; i++) {
-      for (let j = 0; j < text[i].length; j++) {
-        
+      let row = (i - (i % 3)) / 3;
+
+      if (row === 0) {
+        hasil[0][i % 3] = text[i];
+      } else if (row === 1) {
+        hasil[1][i % 3] = text[i];
+      } else {
+        hasil[2][i % 3] = text[i];
       }
     }
+
+    return hasil;
+  } else if (0 < text.length && text.length < 9) {
+    return 'Invalid input.';
   } else {
     return 'Empty board.';
   }
